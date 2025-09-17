@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Evaluation - Upload Image</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Evaluation — Fire + Textile Pipeline</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Upload & Analyze</button>
+    </form>
+    <p>Upload an image and the system will and produce an annotated image, and show comments.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+/* CSS styles *//* static/css/style.css */
+body { font-family: Arial, sans-serif; background:#f4f6f8; color:#222; padding:20px; }
+.container { max-width:900px; margin:0 auto; background:white; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+h1 { margin-top:0; }
+form input[type=file] { display:block; margin-bottom:10px; }
+button { padding:8px 14px; border-radius:6px; border:none; cursor:pointer; background:#1976d2; color:white; }
+.comments { margin-top:18px; }

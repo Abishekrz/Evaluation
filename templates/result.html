@@ -1,0 +1,30 @@
+<!-- templates/result.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Evaluation - Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Analysis Result</h1>
+    <div class="image-area">
+      <img src="{{ image_url }}" alt="annotated image" style="max-width:100%;">
+    </div>
+    <div class="comments">
+      <h2>Comments</h2>
+      {% if comments %}
+        <ul>
+        {% for c in comments %}
+          <li>{{ c }}</li>
+        {% endfor %}
+        </ul>
+      {% else %}
+        <p>No comments generated.</p>
+      {% endif %}
+    </div>
+    <a href="{{ url_for('index') }}">Analyze another image</a>
+  </div>
+</body>
+</html>

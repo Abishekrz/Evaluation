@@ -1,0 +1,25 @@
+models:
+  fire:
+    path: "models/fire_model.pt"
+    class_name: "fire_extinguisher"   # predicted class name expected from model
+  textile:
+    path: "models/textile_model.pt"
+    # list classes of textile model - adjust to match your model's `names`
+    names:
+      - "weighing_scale"
+      - "machine"
+      - "person"
+      - "box"
+      - "needle"
+      - "yarn"
+      - "scissor"
+      # ... include all 20 class names here
+
+heuristics:
+  overlap_threshold: 0.10   # fraction of fire bbox area overlapped to consider it obstructed
+  iou_threshold: 0.05       # optional alternative measure
+  front_object_top_bias: 0.0 # if >0 treat objects with top y smaller by this fraction as 'in front'
+comments:
+  weighing_scale: "Weighing scale detected — verify calibration & ensure clear access."
+  default_other_overlap: "Object obstructing fire extinguisher — extinguisher may not be accessible."
+  fire_accessible: "Fire extinguisher accessible."
